@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Navbar from './components/Navbar';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar/>
+      <button className="btn rounded-full">One</button>
+      <button className="btn rounded-none px-16">Two</button>
+      <button className="btn btn-primary">One</button>
+      <button className="btn btn-secondary">Two</button>
+      <button className="btn btn-accent btn-outline">Three</button>
+      <h4 className='text-red-500'> Tailwind DaisyUi</h4>
+
+      
+      <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+  <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+    <span className="countdown font-mono text-5xl">
+      <span style={{"--value":15}}></span>
+    </span>
+    days
+  </div> 
+  <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+    <span className="countdown font-mono text-5xl">
+      <span style={{"--value":10}}></span>
+    </span>
+    hours
+  </div> 
+  <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+    <span className="countdown font-mono text-5xl">
+      <span style={{"--value":24}}></span>
+    </span>
+    min
+  </div> 
+  <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+    <span className="countdown font-mono text-5xl">
+      <span style={{"--value":45}}></span>
+    </span>
+    sec
+  </div>
+</div>
     </>
   )
 }
 
-export default App
+export default App;
