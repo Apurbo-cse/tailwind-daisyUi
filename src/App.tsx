@@ -1,11 +1,14 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Select from './components/Select';
 
 const App: React.FC = () => {
 
   return (
-    <>
+    <div className='row d-flex justify-between'>
       <Navbar/>
+
+      <Select/>
       <button className="btn rounded-full">One</button>
       <button className="btn rounded-none px-16">Two</button>
       <button className="btn btn-primary">One</button>
@@ -40,7 +43,7 @@ const App: React.FC = () => {
     sec
   </div>
 </div>
-    </>
+    </div>
   )
 }
 
